@@ -10,55 +10,55 @@ st.set_page_config(page_title="✨ PixelScope - RGB Scanner", layout="centered")
 st.markdown("""
 <style>
 body {
-    background: radial-gradient(circle at top, #1a1c2e 0%, #0b0c10 100%);
-    color: #EAEAEA;
+    background: #FFFFFF;
+    color: #000000;
     font-family: 'Segoe UI', sans-serif;
 }
 .main > div {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(20, 20, 20, 0.9);
     backdrop-filter: blur(12px);
     border-radius: 20px;
     padding: 1.8rem 2.2rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 h1, h2, h3, h4 {
-    color: #9EE7FF;
-    text-shadow: 0 0 10px rgba(158,231,255,0.6);
+    color: #FFFFFF;
+    text-shadow: 0 0 8px rgba(255,255,255,0.3);
 }
-.stMarkdown, p, label {
-    color: #E0E0E0 !important;
+.stMarkdown, p, label, span {
+    color: #F0F0F0 !important;
 }
 .pixel-box {
     width: 80px; height: 80px;
     border-radius: 20px;
-    border: 2px solid rgba(255,255,255,0.2);
-    box-shadow: 0 0 15px rgba(158,231,255,0.3);
+    border: 2px solid rgba(255,255,255,0.3);
+    box-shadow: 0 0 15px rgba(255,255,255,0.15);
 }
 div[data-testid="stFileUploader"] > section {
-    border: 2px dashed rgba(158,231,255,0.4);
+    border: 2px dashed rgba(255,255,255,0.3);
     border-radius: 15px;
-    background-color: rgba(158,231,255,0.05);
+    background-color: rgba(30,30,30,0.7);
     transition: 0.3s;
 }
 div[data-testid="stFileUploader"] > section:hover {
-    background-color: rgba(158,231,255,0.1);
+    background-color: rgba(60,60,60,0.8);
 }
 .stDataFrame {
     border-radius: 12px !important;
-    background-color: rgba(255,255,255,0.04);
+    background-color: rgba(40,40,40,0.9);
 }
 footer { visibility: hidden; }
 hr {
     border: none;
-    border-top: 1px solid rgba(158,231,255,0.4);
+    border-top: 1px solid rgba(255,255,255,0.2);
 }
 </style>
 """, unsafe_allow_html=True)
 
 # ========== HEADER ==========
 st.markdown("<h1 style='text-align:center;'>✨ PixelScope</h1>", unsafe_allow_html=True)
-st.markdown("<p style='text-align:center;color:#9EE7FF;'>Deteksi warna piksel dengan efek kaca modern</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align:center;color:#000;'>Deteksi warna piksel dengan tema gelap di atas latar putih</p>", unsafe_allow_html=True)
 
 # ========== UPLOADER ==========
 uploaded_file = st.file_uploader("📤 Upload gambar", type=["png", "jpg", "jpeg"])
@@ -109,7 +109,7 @@ if uploaded_file is not None:
             st.dataframe(neighborhood, use_container_width=True)
 
     st.markdown("<hr>", unsafe_allow_html=True)
-    st.markdown("<p style='text-align:center;color:#9EE7FF;'>🌌 Dibuat dengan semangat kaca digital — by Gibran 🌌</p>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align:center;color:#000;'>🌌 Dibuat dengan gaya gelap modern — by Gibran 🌌</p>", unsafe_allow_html=True)
 
 else:
     st.info("📁 Silakan upload gambar terlebih dahulu.")
