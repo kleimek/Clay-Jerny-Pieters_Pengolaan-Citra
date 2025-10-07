@@ -9,50 +9,60 @@ st.set_page_config(page_title="✨ PixelScope - RGB Scanner", layout="centered")
 
 st.markdown("""
 <style>
-body {
-    background: #FFFFFF;
-    color: #000000;
-    font-family: 'Segoe UI', sans-serif;
+/* === Global background === */
+html, body, [data-testid="stAppViewContainer"], [data-testid="stAppViewBlockContainer"] {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+    font-family: 'Segoe UI', sans-serif !important;
 }
+
+/* === Main container === */
 .main > div {
-    background: rgba(20, 20, 20, 0.9);
-    backdrop-filter: blur(12px);
-    border-radius: 20px;
-    padding: 1.8rem 2.2rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    background: rgba(20, 20, 20, 0.95) !important;
+    border-radius: 20px !important;
+    padding: 1.8rem 2.2rem !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4) !important;
+    color: #FFFFFF !important;
 }
-h1, h2, h3, h4 {
-    color: #FFFFFF;
-    text-shadow: 0 0 8px rgba(255,255,255,0.3);
+
+/* === Headers & Text === */
+h1, h2, h3, h4, label, p, span, div, .stMarkdown {
+    color: #FFFFFF !important;
 }
-.stMarkdown, p, label, span {
-    color: #F0F0F0 !important;
-}
+
+/* === Pixel color box === */
 .pixel-box {
     width: 80px; height: 80px;
     border-radius: 20px;
     border: 2px solid rgba(255,255,255,0.3);
-    box-shadow: 0 0 15px rgba(255,255,255,0.15);
+    box-shadow: 0 0 15px rgba(255,255,255,0.2);
 }
+
+/* === File uploader === */
 div[data-testid="stFileUploader"] > section {
-    border: 2px dashed rgba(255,255,255,0.3);
-    border-radius: 15px;
-    background-color: rgba(30,30,30,0.7);
-    transition: 0.3s;
+    border: 2px dashed rgba(255,255,255,0.3) !important;
+    border-radius: 15px !important;
+    background-color: rgba(30,30,30,0.8) !important;
+    transition: 0.3s !important;
 }
 div[data-testid="stFileUploader"] > section:hover {
-    background-color: rgba(60,60,60,0.8);
+    background-color: rgba(50,50,50,0.9) !important;
 }
+
+/* === DataFrames === */
 .stDataFrame {
     border-radius: 12px !important;
-    background-color: rgba(40,40,40,0.9);
+    background-color: rgba(40,40,40,0.9) !important;
+    color: #FFFFFF !important;
 }
-footer { visibility: hidden; }
+
+/* === Divider & Footer === */
 hr {
-    border: none;
-    border-top: 1px solid rgba(255,255,255,0.2);
+    border: none !important;
+    border-top: 1px solid rgba(255,255,255,0.3) !important;
 }
+footer { visibility: hidden !important; }
 </style>
 """, unsafe_allow_html=True)
 
