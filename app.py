@@ -59,7 +59,7 @@ div[data-testid="stFileUploader"] > section {
     color: #1f2937 !important;
 }
 div[data-testid="stFileUploader"] > section:hover {
-    background-color: #f1f5f9 !important;
+    background-color: #1f2937 !important;
 }
 
 /* ===== TABEL PIXEL ===== */
