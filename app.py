@@ -9,46 +9,61 @@ st.set_page_config(page_title="🎨 PixelScope - RGB Analyzer", layout="centered
 
 st.markdown("""
 <style>
+/* Background global putih */
 html, body, [class*="stAppViewContainer"], [class*="stMainBlockContainer"] {
     background-color: #ffffff !important;
     color: #111827 !important;
     font-family: "Inter", "Segoe UI", sans-serif;
 }
+
+/* Box utama warna gelap */
 .main > div {
-    background-color: #ffffff !important;
-    border-radius: 16px;
+    background-color: #1e293b !important;  /* slate-800 */
+    color: #f9fafb !important;
+    border-radius: 18px;
     padding: 1.8rem 2rem;
-    border: 1px solid #e5e7eb;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border: 1px solid #334155;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
+
+/* Teks & judul */
 h1, h2, h3, h4 {
-    color: #111827 !important;
+    color: #f1f5f9 !important;
 }
 .stMarkdown, p, label {
-    color: #374151 !important;
+    color: #e2e8f0 !important;
 }
+
+/* Box warna hasil */
 .pixel-box {
     width: 80px; height: 80px;
     border-radius: 12px;
-    border: 2px solid #e5e7eb;
-    box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+    border: 2px solid #475569;
+    box-shadow: 0 0 10px rgba(255,255,255,0.08);
 }
+
+/* Uploader */
 div[data-testid="stFileUploader"] > section {
-    border: 2px dashed #cbd5e1;
+    border: 2px dashed #64748b;
     border-radius: 10px;
-    background-color: #f8fafc;
+    background-color: #334155;
     transition: 0.3s;
 }
 div[data-testid="stFileUploader"] > section:hover {
-    background-color: #f1f5f9;
+    background-color: #475569;
 }
+
+/* DataFrame */
 .stDataFrame {
     border-radius: 10px !important;
-    background-color: #ffffff;
+    background-color: #0f172a !important;
+    color: #f1f5f9 !important;
 }
+
+/* Misc */
 hr {
     border: none;
-    border-top: 1px solid #e5e7eb;
+    border-top: 1px solid #334155;
 }
 footer { visibility: hidden; }
 </style>
@@ -56,7 +71,7 @@ footer { visibility: hidden; }
 
 # ========== HEADER ==========
 st.markdown("<h1 style='text-align:center;'>🎨 PixelScope</h1>", unsafe_allow_html=True)
-st.markdown("<p style='text-align:center;color:#6b7280;'>Analisis warna piksel dengan tampilan putih bersih dan minimalis</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align:center;color:#94a3b8;'>Analisis warna piksel dengan tampilan elegan gelap di atas putih</p>", unsafe_allow_html=True)
 
 # ========== UPLOADER ==========
 uploaded_file = st.file_uploader("📤 Upload gambar", type=["png", "jpg", "jpeg"])
@@ -100,14 +115,14 @@ if uploaded_file is not None:
             st.dataframe(row_focus, use_container_width=True)
 
             # Area sekitar (5×5)
-            st.markdown("### 🟩 Area sekitar (5×5 pixel):")
+            st.markdown("### 🟦 Area sekitar (5×5 pixel):")
             y_start, y_end = max(0, y-2), min(height, y+3)
             x_start, x_end = max(0, x-2), min(width, x+3)
             neighborhood = df_full.iloc[y_start:y_end, x_start:x_end]
             st.dataframe(neighborhood, use_container_width=True)
 
     st.markdown("<hr>", unsafe_allow_html=True)
-    st.markdown("<p style='text-align:center;color:#9ca3af;'>🧠 Dibuat dengan kesederhanaan — by Gibran 🧠</p>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align:center;color:#94a3b8;'>🌗 Minimalis elegan — by Gibran 🌗</p>", unsafe_allow_html=True)
 
 else:
     st.info("📁 Silakan upload gambar terlebih dahulu.")
