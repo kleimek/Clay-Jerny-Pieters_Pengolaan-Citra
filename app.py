@@ -44,14 +44,27 @@ div[data-testid="stFileUploader"] > section {
     border: 2px dashed rgba(0,0,0,0.4) !important;
     border-radius: 15px !important;
     background-color: #2a2a2a !important;
-    color: #FFFFFF !important;
 }
-div[data-testid="stFileUploader"] * {
-    color: #FFFFFF !important;
+
+/* Label utama "Upload gambar" → jadi hitam */
+div[data-testid="stFileUploader"] label,
+div[data-testid="stFileUploader"] p,
+div[data-testid="stFileUploader"] span {
+    color: #000000 !important;
+    font-weight: 600 !important;
 }
-div[data-testid="stFileUploader"] > section:hover {
-    background-color: #3a3a3a !important;
+
+/* Tombol “Browse files” tetap putih */
+div[data-testid="stFileUploader"] button {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border-radius: 8px !important;
+    font-weight: bold !important;
 }
+div[data-testid="stFileUploader"] button:hover {
+    background-color: #e6e6e6 !important;
+}
+
 
 /* === Tombol "Browse files" === */
 div[data-testid="stFileUploader"] button {
