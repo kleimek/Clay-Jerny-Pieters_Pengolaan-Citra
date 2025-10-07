@@ -39,19 +39,23 @@ h1, h2, h3, h4, p, label, span, div, .stMarkdown {
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-/* === File uploader === */
+/* === FILE UPLOADER === */
 div[data-testid="stFileUploader"] > section {
-    border: 2px dashed rgba(0,0,0,0.4) !important;
+    border: 2px dashed rgba(255,255,255,0.3) !important;
     border-radius: 15px !important;
-    background-color: #2a2a2a !important;
+    background-color: #1a1a1a !important; /* tetap hitam */
+    transition: 0.3s ease-in-out;
+}
+div[data-testid="stFileUploader"] > section:hover {
+    background-color: #222222 !important;
 }
 
-/* Label utama "Upload gambar" → jadi hitam */
+/* Warna teks di dalam uploader jadi PUTIH */
 div[data-testid="stFileUploader"] label,
 div[data-testid="stFileUploader"] p,
 div[data-testid="stFileUploader"] span {
-    color: #000000 !important;
-    font-weight: 600 !important;
+    color: #ffffff !important;
+    font-weight: 500 !important;
 }
 
 /* Tombol “Browse files” tetap putih */
@@ -64,7 +68,6 @@ div[data-testid="stFileUploader"] button {
 div[data-testid="stFileUploader"] button:hover {
     background-color: #e6e6e6 !important;
 }
-
 
 /* === Tombol "Browse files" === */
 div[data-testid="stFileUploader"] button {
