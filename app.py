@@ -9,20 +9,20 @@ st.set_page_config(page_title="🎨 PixelScope - RGB Analyzer", layout="centered
 
 st.markdown("""
 <style>
-body {
-    background: #f9fafb;
-    color: #333333;
+html, body, [class*="stAppViewContainer"], [class*="stMainBlockContainer"] {
+    background-color: #ffffff !important;
+    color: #111827 !important;
     font-family: "Inter", "Segoe UI", sans-serif;
 }
 .main > div {
-    background-color: #ffffff;
+    background-color: #ffffff !important;
     border-radius: 16px;
     padding: 1.8rem 2rem;
     border: 1px solid #e5e7eb;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 h1, h2, h3, h4 {
-    color: #111827;
+    color: #111827 !important;
 }
 .stMarkdown, p, label {
     color: #374151 !important;
@@ -36,11 +36,11 @@ h1, h2, h3, h4 {
 div[data-testid="stFileUploader"] > section {
     border: 2px dashed #cbd5e1;
     border-radius: 10px;
-    background-color: #f1f5f9;
-    transition: 0.3s ease-in-out;
+    background-color: #f8fafc;
+    transition: 0.3s;
 }
 div[data-testid="stFileUploader"] > section:hover {
-    background-color: #e2e8f0;
+    background-color: #f1f5f9;
 }
 .stDataFrame {
     border-radius: 10px !important;
@@ -51,16 +51,12 @@ hr {
     border-top: 1px solid #e5e7eb;
 }
 footer { visibility: hidden; }
-.success {
-    background-color: #ecfdf5 !important;
-    color: #065f46 !important;
-}
 </style>
 """, unsafe_allow_html=True)
 
 # ========== HEADER ==========
 st.markdown("<h1 style='text-align:center;'>🎨 PixelScope</h1>", unsafe_allow_html=True)
-st.markdown("<p style='text-align:center;color:#6b7280;'>Analisis warna piksel dengan tampilan minimalis & bersih</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align:center;color:#6b7280;'>Analisis warna piksel dengan tampilan putih bersih dan minimalis</p>", unsafe_allow_html=True)
 
 # ========== UPLOADER ==========
 uploaded_file = st.file_uploader("📤 Upload gambar", type=["png", "jpg", "jpeg"])
