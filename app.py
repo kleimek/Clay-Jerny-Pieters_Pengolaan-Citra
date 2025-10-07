@@ -46,7 +46,7 @@ h1, h2, h3, h4 {
 div[data-testid="stFileUploader"] > section {
     border: 2px dashed #64748b;
     border-radius: 10px;
-    background-color: #334155;
+    background-color: #314155;
     transition: 0.3s;
 }
 div[data-testid="stFileUploader"] > section:hover {
