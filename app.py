@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 import numpy as np
 import pandas as pd
-from streamlit_image_coordinates import streamlit_image_coordinates
+from streamlit-image-coordinates import streamlit-image-coordinates
 
 # ========== STYLE GLOBAL ==========
 st.set_page_config(page_title="⚡ RGB Vision Scanner", layout="centered")
